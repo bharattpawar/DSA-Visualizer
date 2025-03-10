@@ -1,0 +1,45 @@
+/* QueueVisualization.css - Ultra-Modern Design */
+.queue-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    gap: 1rem;
+  }
+  
+  .queue-item {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .value {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    font-size: 1.2rem;
+    color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .arrow {
+    margin: 0 10px;
+    font-size: 1.5rem;
+    color: #007bff;
+  }
+  
+  /* Responsive Design for Small Phones */
+  @media (max-width: 600px) {
+    .queue-container {
+      flex-direction: column;
+    }
+  
+    .value {
+      font-size: 1rem;
+    }
+  
+    .arrow {
+      font-size: 1.2rem;
+    }
+  }

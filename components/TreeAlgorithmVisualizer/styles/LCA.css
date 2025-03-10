@@ -1,0 +1,46 @@
+.lca-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #1e1e1e; /* Dark background */
+  border-radius: 10px;
+  color: #ffffff; /* White text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjusted shadow for dark background */
+  margin-bottom: 20px;
+}
+
+#lca-title {
+  font-size: 1.5rem;
+  color: #ffffff; /* White text color */
+  margin-bottom: 20px;
+}
+
+.lca-messages {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #bbbbbb; /* Light grey text color */
+}
+
+.messages {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #555555; /* Adjusted border color for dark background */
+  border-radius: 5px;
+  background-color: #333333; /* Dark background */
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.message {
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 3px;
+  background-color: #555555; /* Darker background for messages */
+  color: #ffffff; /* White text color */
+}
+
+.message.active {
+  background-color: #ffcc80; /* Highlight color for the active message */
+  font-weight: bold;
+}

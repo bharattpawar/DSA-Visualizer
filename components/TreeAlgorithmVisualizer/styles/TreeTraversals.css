@@ -1,0 +1,27 @@
+.tree-traversals-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  #tree-traversals-title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .tree-traversals-messages {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #555;
+  }
+  .speedfont,.speedfont2{
+    color: black;
+    position: relative;
+    bottom:13px;
+  }

@@ -1,0 +1,243 @@
+/* General Styles */
+.graph-viz-app {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(40, 40, 40, 0.9); /* Dark background box */
+  color: #fff; /* White text color */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+.graph-viz-app h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #fff; /* White text color */
+}
+
+.graph-viz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  background-color: rgba(40, 40, 40, 0.9); /* Dark background box */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff; /* White text color */
+}
+
+.graph-viz-mode-selector {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.graph-viz-mode-selector button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.graph-viz-mode-selector button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.graph-viz-mode-selector button:active {
+  transform: scale(0.95);
+}
+
+.graph-viz-controls {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.graph-viz-controls button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.graph-viz-controls button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.graph-viz-controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.graph-viz-controls label {
+  margin-left: 20px;
+  font-size: 1rem;
+  color: #fff; /* White text color */
+}
+
+.graph-viz-controls input[type="range"] {
+  cursor: pointer;
+}
+
+.graph-viz-custom-input {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.graph-viz-custom-input textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: rgba(40, 40, 40, 0.9); /* Dark background box */
+  color: #fff; /* White text color */
+}
+
+.graph-viz-custom-input textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.graph-viz-algorithm-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.graph-viz-algorithm-selector button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #28a745;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.graph-viz-algorithm-selector button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.graph-viz-algorithm-selector button:active {
+  transform: scale(0.95);
+}
+
+.graph-viz-canvas {
+  border: 1px solid #ccc;
+  background-color: rgba(40, 40, 40, 0.9); /* Dark background box */
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff; /* White text color */
+}
+
+.graph-viz-result {
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(40, 40, 40, 0.9); /* Dark background box */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  color: #fff; /* White text color */
+}
+
+.graph-viz-result h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #fff; /* White text color */
+}
+
+.graph-viz-result p,
+.graph-viz-result ul {
+  font-size: 1rem;
+  color: #fff; /* White text color */
+}
+
+.graph-viz-result ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.graph-viz-result ul li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgba(40, 40, 40, 0.9); /* Dark background box */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  color: #fff; /* White text color */
+}
+
+.graph-viz-result ul li:hover {
+  background-color: #f65858;
+}
+
+.graph-viz-explanation {
+  width: 100%;
+  max-width: 800px;
+  background-color: rgba(40, 40, 40, 0.9); /* Dark background box */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  color: #fff; /* White text color */
+}
+
+.graph-viz-explanation h3 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #fff; /* White text color */
+}
+
+.graph-viz-explanation ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.graph-viz-explanation ul li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgba(40, 40, 40, 0.9); /* Dark background box */
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  color: #fff; /* White text color */
+}
+
+.graph-viz-explanation ul li:hover {
+  background-color: #d4d4d4;
+}

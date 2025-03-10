@@ -1,0 +1,92 @@
+/* Common styles for both input and visualization Sudoku boards */
+.btv-sudoku-input-board,
+.btv-sudoku-board {
+  display: grid;
+  grid-template-columns: repeat(9, 40px); /* 9 columns, each 40px wide */
+  grid-template-rows: repeat(9, 40px); /* 9 rows, each 40px tall */
+  gap: 1px; /* Gap between cells */
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.btv-sudoku-input-cell,
+.btv-sudoku-cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #555; /* Darker border */
+  background-color: rgba(60, 60, 60, 0.9); /* Dark background */
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* White text */
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btv-sudoku-input-cell input {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* White text */
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove default input border */
+  outline: none; /* Remove outline on focus */
+}
+
+.btv-sudoku-input-cell input:focus {
+  background-color: rgba(80, 80, 80, 0.9); /* Slightly lighter on focus */
+}
+
+.btv-sudoku-cell--fixed {
+  background-color: rgba(80, 80, 80, 0.9); /* Slightly lighter for fixed cells */
+}
+
+/* Add thicker borders for 3x3 subgrids */
+.btv-sudoku-input-cell:nth-child(3n),
+.btv-sudoku-cell:nth-child(3n) {
+  border-right: 2px solid #777; /* Thicker border for every 3rd cell */
+}
+
+.btv-sudoku-input-cell:nth-child(9n),
+.btv-sudoku-cell:nth-child(9n) {
+  border-right: none; /* Remove border for the last cell in each row */
+}
+
+.btv-sudoku-input-board .btv-sudoku-input-cell:nth-child(-n + 9),
+.btv-sudoku-board .btv-sudoku-cell:nth-child(-n + 9) {
+  border-top: none; /* Remove border for the first row */
+}
+
+.btv-sudoku-input-board .btv-sudoku-input-cell:nth-last-child(-n + 9),
+.btv-sudoku-board .btv-sudoku-cell:nth-last-child(-n + 9) {
+  border-bottom: none; /* Remove border for the last row */
+}
+
+@media (max-width: 480px) {
+  .btv-sudoku-input-board,
+  .btv-sudoku-board {
+    grid-template-columns: repeat(9, 30px); /* Smaller cells for small screens */
+    grid-template-rows: repeat(9, 30px);
+    gap: 1px;
+  }
+
+  .btv-sudoku-input-cell,
+  .btv-sudoku-cell {
+    width: 30px;
+    height: 30px;
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .btv-sudoku-input-cell input {
+    font-size: 14px; /* Smaller font size for input */
+  }
+
+  .btv-sudoku-input-cell:nth-child(3n),
+  .btv-sudoku-cell:nth-child(3n) {
+    border-right: 1px solid #777; /* Thinner border for small screens */
+  }
+}

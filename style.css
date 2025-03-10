@@ -1,0 +1,219 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgba(26, 26, 26, 255); /* Updated background color */
+  color: rgb(255, 255, 255);
+  line-height: 1.6;
+  padding-top: 60px;
+  overflow-x: hidden;
+}
+
+/* Container Styles */
+.dsa-container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Hero Section */
+.dsa-hero {
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.7)); /* Updated gradient */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: -20px;
+  align-items: center;
+  gap: 20px; /* Space between logo and content */
+}
+
+.dsa-hero img {
+  height: 150px; /* Adjust the size of the logo */
+  width: 150px; /* Adjust the size of the logo */
+  border-radius: 50%; /* Makes the logo circular */
+  border: 2px solid rgba(255, 255, 255, 0.8); /* Adds a subtle border */
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.6), /* Inner glow */
+    0 0 20px rgba(255, 255, 255, 0.4), /* Middle glow */
+    0 0 30px rgba(255, 255, 255, 0.2); /* Outer glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation for rotation on hover */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dsa-hero img:hover {
+  animation: rotate 3s linear infinite; /* Rotate for 3 seconds on hover */
+  box-shadow: 
+    0 0 15px rgba(255, 255, 255, 0.8), /* Stronger inner glow */
+    0 0 30px rgba(255, 255, 255, 0.6), /* Stronger middle glow */
+    0 0 45px rgba(255, 255, 255, 0.4); /* Stronger outer glow */
+}
+
+.dsa-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dsa-hero h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  word-wrap: break-word;
+  animation: glow 2s infinite; /* Glow effect */
+}
+
+.dsa-hero p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  opacity: 0.9;
+  word-wrap: break-word;
+}
+
+.dsa-hero-button {
+  background-color: #ff6f61;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  margin: 5px 0;
+  animation: glow 2s infinite; /* Glow effect */
+}
+
+.dsa-hero-button:hover {
+  background-color: #ff4a3d;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dsa-hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+/* Footer Styles */
+.dsa-footer {
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  word-wrap: break-word;
+  background-color: rgba(26, 26, 26, 255); /* Updated background color */
+}
+
+.dsa-footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dsa-footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.dsa-footer-content p {
+  margin-top: 20px;
+  opacity: 0.8;
+  word-wrap: break-word;
+}
+
+/* Glow Animation */
+@keyframes glow {
+  0% {
+    text-shadow: 
+      0 0 3px rgba(229, 234, 233, 0.5); /* Very subtle light gray glow */
+  }
+  50% {
+    text-shadow: 
+      0 0 5px rgba(251, 251, 251, 0.7); /* Slightly brighter white glow */
+  }
+  100% {
+    text-shadow: 
+      0 0 3px rgba(223, 223, 223, 0.5); /* Return to subtle light gray glow */
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dsa-hero h1 {
+    font-size: 2.5em;
+  }
+
+  .dsa-hero p {
+    font-size: 1em;
+  }
+
+  .dsa-hero {
+    padding: 60px 10px;
+  }
+
+  .dsa-footer-links a {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dsa-hero h1 {
+    font-size: 2em;
+  }
+
+  .dsa-hero p {
+    font-size: 0.9em;
+  }
+
+  .dsa-hero-button, .dsa-youtube-link {
+    padding: 8px 16px;
+    font-size: 0.8em;
+  }
+
+  .dsa-footer-links a {
+    font-size: 0.8em;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 300px) {
+  .dsa-hero h1 {
+    font-size: 1.8em;
+  }
+
+  .dsa-hero p {
+    font-size: 0.8em;
+  }
+
+  .dsa-hero-button, .dsa-youtube-link {
+    padding: 6px 12px;
+    font-size: 0.7em;
+  }
+
+  .dsa-footer-links a {
+    font-size: 0.7em;
+    padding: 5px 10px;
+  }
+}

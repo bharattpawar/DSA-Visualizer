@@ -1,0 +1,37 @@
+.sieve-container {
+    text-align: left;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sieve-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+  
+  .steps {
+    margin-top: 15px;
+  }
+  
+  .step {
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .step p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+  }

@@ -1,0 +1,23 @@
+.bst-operations-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #1e1e1e; /* Dark background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjusted shadow for dark background */
+  color: #ffffff; /* White text color */
+  margin-bottom: 20px;
+}
+
+#bst-operations-title {
+  font-size: 1.5rem;
+  color: #ffffff; /* White text color */
+  margin-bottom: 20px;
+}
+
+.bst-operations-messages {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #bbbbbb; /* Light grey text color */
+}

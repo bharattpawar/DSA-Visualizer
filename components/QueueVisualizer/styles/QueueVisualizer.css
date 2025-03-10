@@ -1,0 +1,101 @@
+/* QueueVisualizer.css - Ultra-Modern Dark Design */
+.queue-visualizer {
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d); /* Dark gradient background */
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: 2rem auto;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  backdrop-filter: blur(10px);
+}
+
+.queue-visualizer h1 {
+  font-size: 2.5rem;
+  color: #ffffff; /* White text */
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.controls input {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 200px;
+  color: #ffffff; /* White text */
+}
+
+.controls input::placeholder {
+  color: rgba(255, 255, 255, 0.5); /* Light placeholder text */
+}
+
+.controls input:focus {
+  border-color: #007bff; /* Blue border on focus */
+  box-shadow: 0 8px 32px rgba(0, 123, 255, 0.3);
+}
+
+.controls button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #007bff, #0056b3); /* Blue gradient */
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.controls button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0, 123, 255, 0.4); /* Glow effect on hover */
+}
+
+.message {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: #28a745; /* Green success message */
+  font-weight: 500;
+}
+
+/* Responsive Design for Small Phones */
+@media (max-width: 600px) {
+  .queue-visualizer {
+    padding: 1.5rem;
+    border-radius: 15px;
+  }
+
+  .queue-visualizer h1 {
+    font-size: 2rem;
+  }
+
+  .controls input {
+    width: 100%;
+    max-width: none;
+  }
+
+  .controls button {
+    width: 100%;
+  }
+
+  .message {
+    font-size: 1rem;
+  }
+}

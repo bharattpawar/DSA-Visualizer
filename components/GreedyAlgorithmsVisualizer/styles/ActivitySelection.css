@@ -1,0 +1,77 @@
+/* Activity Selection */
+.activity-selection {
+    margin: 10px;
+    padding: 20px;
+    color: white;
+    background-color: rgba(40, 40, 40, 0.9); /* Dark background box */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.activities, .selected-activities {
+    margin-top: 15px;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.9); /* Slightly lighter background box */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activity {
+    padding: 12px;
+    color: white;
+    background-color: rgba(60, 60, 60, 0.9); /* Even lighter background box */
+    border-radius: 8px;
+    margin: 8px 0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.activity.selected {
+    background-color: #69b3a2; /* Green for selected activities */
+    color: #fff;
+}
+
+.activity.rejected {
+    background-color: #ff6b6b; /* Red for rejected activities */
+    color: #fff;
+}
+
+.explanation {
+    margin-top: 15px;
+    font-style: italic;
+    color: white;
+    font-size: 14px;
+    background-color: rgba(50, 50, 50, 0.9); /* Background box for explanation */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsive Design for Screens Under 440px */
+@media (max-width: 440px) {
+    .activity-selection {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .activities, .selected-activities {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .activity {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .explanation {
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 12px;
+    }
+}

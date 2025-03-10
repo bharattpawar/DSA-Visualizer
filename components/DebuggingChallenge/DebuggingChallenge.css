@@ -1,0 +1,180 @@
+/* General styling for the debugging challenge container */
+.debugging-challenge-container {
+  padding: 20px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Glass morphism background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  max-width: 800px;
+  margin: 10px auto;
+}
+
+/* Challenge description styling */
+.challenge-description {
+  margin-bottom: 15px;
+  font-size: 1rem; /* Smaller font size for small screens */
+  color: #e0e0e0; /* Light gray for better readability */
+}
+
+/* Code snippet styling */
+.code-snippet {
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.2); /* Dark background for code */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: left;
+  font-family: 'Courier New', monospace;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  font-size: 0.9rem; /* Smaller font size for code */
+}
+
+/* User solution textarea styling */
+.user-solution textarea {
+  width: 100%;
+  height: 120px; /* Smaller height for small screens */
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1); /* Glass morphism background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  color: #ffffff;
+  margin-bottom: 15px;
+  resize: vertical; /* Allow vertical resizing */
+  transition: border-color 0.3s, box-shadow 0.3s;
+  font-size: 0.9rem; /* Smaller font size for textarea */
+}
+
+.user-solution textarea:focus {
+  border-color: #69b3a2; /* Highlight border on focus */
+  box-shadow: 0 0 8px rgba(105, 179, 162, 0.5); /* Glow effect on focus */
+}
+
+/* Actions button styling */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.actions button {
+  padding: 10px 20px;
+  background: linear-gradient(145deg, #69b3a2, #4a8f7d); /* Gradient background */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  font-size: 0.9rem; /* Smaller font size for buttons */
+}
+
+.actions button:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Result message styling */
+.result {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.1); /* Glass morphism background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  font-size: 0.9rem; /* Smaller font size for result messages */
+}
+
+.result.correct {
+  color: #4caf50; /* Green for correct result */
+  border-left: 4px solid #4caf50; /* Green accent border */
+}
+
+.result.incorrect {
+  color: #f44336; /* Red for incorrect result */
+  border-left: 4px solid #f44336; /* Red accent border */
+}
+
+/* Hint container styling */
+.hint-container {
+  margin-top: 15px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1); /* Glass morphism background */
+  border-radius: 8px;
+  border-left: 4px solid #69b3a2; /* Accent border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  font-size: 0.9rem; /* Smaller font size for hints */
+}
+
+.hint-container h3 {
+  margin-bottom: 8px;
+  color: #dfedfa; /* Light blue for heading */
+  font-size: 1rem; /* Smaller font size for heading */
+}
+
+.hint-container button {
+  margin-top: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(145deg, #69b3a2, #4a8f7d); /* Gradient background */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  font-size: 0.9rem; /* Smaller font size for hint button */
+}
+
+.hint-container button:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Responsive design for very small screens */
+@media (max-width: 480px) {
+  .debugging-challenge-container {
+      padding: 10px;
+  }
+
+  .challenge-description {
+      font-size: 0.9rem; /* Even smaller font size for very small screens */
+  }
+
+  .code-snippet {
+      padding: 10px;
+      font-size: 0.8rem; /* Smaller font size for code */
+  }
+
+  .user-solution textarea {
+      height: 100px; /* Smaller height for very small screens */
+      font-size: 0.8rem; /* Smaller font size for textarea */
+  }
+
+  .actions button {
+      padding: 8px 16px;
+      font-size: 0.8rem; /* Smaller font size for buttons */
+  }
+
+  .result {
+      font-size: 0.8rem; /* Smaller font size for result messages */
+  }
+
+  .hint-container {
+      padding: 10px;
+      font-size: 0.8rem; /* Smaller font size for hints */
+  }
+
+  .hint-container h3 {
+      font-size: 0.9rem; /* Smaller font size for heading */
+  }
+
+  .hint-container button {
+      padding: 6px 12px;
+      font-size: 0.8rem; /* Smaller font size for hint button */
+  }
+}

@@ -1,0 +1,106 @@
+/* Huffman Coding */
+.huffman-coding {
+    margin: 10px;
+    padding: 20px;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.characters, .codes, .tree-visualization {
+    margin-top: 15px;
+    color: white;
+}
+
+.character, .code {
+    padding: 12px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+.tree-visualization {
+    margin-top: 15px;
+    color: #333;
+}
+
+.link {
+    stroke: #999;
+    stroke-width: 2;
+    fill: none;
+}
+
+.node circle {
+    fill: #69b3a2;
+    stroke: #999;
+    stroke-width: 2;
+}
+
+.node text {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    fill: #333;
+}
+
+.explanation {
+    margin-top: 15px;
+    font-style: italic;
+    color: white;
+    font-size: 14px;
+}
+
+button {
+    margin: 8px;
+    padding: 10px 20px;
+    background-color: #69b3a2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4a8c7a;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 8px 0;
+    width: 100%;
+    max-width: 400px; /* Default max-width for larger screens */
+}
+
+/* Responsive Design for Screens Under 440px */
+@media (max-width: 440px) {
+    .huffman-coding {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .character, .code {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .node text {
+        font-size: 10px;
+    }
+
+    .explanation {
+        font-size: 12px;
+    }
+
+    button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 12px;
+        max-width: 100%; /* Allow input to take full width on small screens */
+    }
+}

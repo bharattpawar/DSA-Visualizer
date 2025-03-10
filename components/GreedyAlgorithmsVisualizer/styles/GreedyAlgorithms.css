@@ -1,0 +1,93 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(26, 26, 26, 255); /* Dark background */
+    color: white; /* White text for contrast */
+    line-height: 1.6;
+}
+
+/* Greedy Algorithms Container */
+.greedy-algorithms {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(40, 40, 40, 0.9); /* Dark background box */
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.greedy-algorithms h2 {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+/* Algorithm Selector */
+.algorithm-selector {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    background-color: rgba(50, 50, 50, 0.9); /* Slightly lighter background box */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.algorithm-selector label {
+    font-size: 1rem;
+    color: white;
+    margin-right: 10px;
+}
+
+.algorithm-selector select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: rgba(60, 60, 60, 0.9); /* Even lighter background box */
+    color: white; /* White text for contrast */
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.algorithm-selector select:hover {
+    border-color: #007bff;
+}
+
+.algorithm-selector select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive Design for Screens Under 440px */
+@media (max-width: 440px) {
+    .greedy-algorithms {
+        padding: 10px;
+    }
+
+    .greedy-algorithms h2 {
+        font-size: 1.5rem;
+    }
+
+    .algorithm-selector {
+        padding: 10px;
+    }
+
+    .algorithm-selector label {
+        font-size: 0.9rem;
+    }
+
+    .algorithm-selector select {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}

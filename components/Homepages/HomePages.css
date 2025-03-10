@@ -1,0 +1,122 @@
+/* Homepages.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0f0f1a;
+  color: #ffffff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Homepage Sections */
+.homepage1, .homepage2, .homepage3, .homepage4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 1px solid #2c2c4a;
+}
+
+.homepage1txt, .homepage2txt, .homepage3txt, .homepage4txt {
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+.homepage1 h1, .homepage2 h1, .homepage3 h1, .homepage4 h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #e9f0ef;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #dedede;
+}
+
+.homepage1 p, .homepage2 p, .homepage3 p, .homepage4 p {
+  font-size: 1.2rem;
+  color: #c0c0c0;
+  margin-bottom: 2rem;
+}
+
+/* Images */
+.homepage1 img, .homepage2 img, .homepage3 img, .homepage4 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homepage1 img:hover, .homepage2 img:hover, .homepage3 img:hover, .homepage4 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .homepage1, .homepage2, .homepage3, .homepage4 {
+      flex-direction: column;
+      padding: 1rem;
+      min-height: auto; /* Adjust min-height for smaller screens */
+  }
+
+  .homepage1txt, .homepage2txt, .homepage3txt, .homepage4txt {
+      max-width: 90%;
+      margin-bottom: 1rem; /* Reduce margin for smaller screens */
+  }
+
+  .homepage1 h1, .homepage2 h1, .homepage3 h1, .homepage4 h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem; /* Reduce margin for smaller screens */
+  }
+
+  .homepage1 p, .homepage2 p, .homepage3 p, .homepage4 p {
+      font-size: 1rem;
+      margin-bottom: 1rem; /* Reduce margin for smaller screens */
+  }
+
+  .homepage1 img, .homepage2 img, .homepage3 img, .homepage4 img {
+      max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .homepage1 h1, .homepage2 h1, .homepage3 h1, .homepage4 h1 {
+      font-size: 1.5rem;
+  }
+
+  .homepage1 p, .homepage2 p, .homepage3 p, .homepage4 p {
+      font-size: 0.9rem;
+  }
+
+  .homepage1, .homepage2, .homepage3, .homepage4 {
+      padding: 0.5rem; /* Further reduce padding for very small screens */
+      margin-bottom: 20px;
+  }
+}
+
+/* Animations */
+@keyframes glow {
+  0% {
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #d8dada;
+  }
+  50% {
+      text-shadow: 0 0 20px #ffffff, 0 0 40px #c7c7c7;
+  }
+  100% {
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #cdcfce;
+  }
+}
+
+.homepage1 h1, .homepage2 h1, .homepage3 h1, .homepage4 h1 {
+  animation: glow 2s infinite;
+}

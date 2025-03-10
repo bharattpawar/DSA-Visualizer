@@ -1,0 +1,70 @@
+.btv-nqueens-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background: rgba(40, 40, 40, 0.9); /* Dark background */
+  color: white; /* White text */
+}
+
+.btv-nqueens-board {
+  display: grid;
+  gap: 2px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.btv-nqueens-cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #555; /* Darker border */
+  background-color: rgba(60, 60, 60, 0.9); /* Dark background */
+  border-radius: 8px;
+  color: white; /* White text */
+  transition: background-color 0.3s ease;
+}
+
+.btv-nqueens-cell--queen {
+  background-color: #ff6b6b; /* Red for queen cells */
+}
+
+.btv-nqueens-message {
+  margin-top: 20px;
+  max-width: 600px;
+  text-align: left;
+  font-size: 16px;
+  color: white; /* White text */
+}
+
+.btv-nqueens-message h3 {
+  margin-bottom: 10px;
+  color: #6e8efb; /* Blue for headings */
+}
+
+@media (max-width: 480px) {
+  .btv-nqueens-container {
+    margin-top: 10px; /* Reduce margin */
+  }
+
+  .btv-nqueens-board {
+    gap: 1px; /* Reduce gap */
+  }
+
+  .btv-nqueens-cell {
+    width: 30px; /* Smaller cells */
+    height: 30px;
+    font-size: 14px; /* Smaller font size */
+  }
+
+  .btv-nqueens-message {
+    font-size: 14px; /* Smaller font size */
+    max-width: 90%; /* Adjust width for small screens */
+  }
+
+  .btv-nqueens-message h3 {
+    font-size: 16px; /* Smaller heading size */
+  }
+}

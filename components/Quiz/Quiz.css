@@ -1,0 +1,116 @@
+/* General styling for the quiz container */
+.quiz-container {
+  padding: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Glass morphism background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+/* Data structure list styling */
+.data-structure-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Data structure card styling */
+.ds-card {
+  padding: 20px;
+  background: linear-gradient(145deg, #69b3a2, #4a8f7d); /* Gradient background */
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.ds-card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Quiz questions container styling */
+.quiz-questions-container {
+  padding: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Glass morphism background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Options button styling */
+.options button {
+  margin: 10px;
+  padding: 12px 24px;
+  background: linear-gradient(145deg, #69b3a2, #4a8f7d); /* Gradient background */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.options button:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Quiz result container styling */
+.quiz-result-container {
+  padding: 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Glass morphism background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+/* Review section styling */
+.review-section {
+  margin-top: 20px;
+}
+
+/* Question review styling */
+.question-review {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1); /* Glass morphism background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 8px;
+  margin-bottom: 10px;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .quiz-container, .quiz-questions-container, .quiz-result-container {
+      padding: 20px;
+  }
+
+  .ds-card {
+      width: 100%; /* Full width on small screens */
+  }
+
+  .options button {
+      width: 100%; /* Full width on small screens */
+      margin: 5px 0;
+  }
+}

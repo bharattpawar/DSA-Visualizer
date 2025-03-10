@@ -1,0 +1,103 @@
+/* General styling for the LearnDSA component */
+.dsa-learn-dsa {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1); /* Glass morphism background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Heading styles */
+.dsa-learn-dsa h1 {
+    font-size: 2rem;
+    color: #dfedfa;
+    margin-bottom: 20px;
+    text-align: center;
+     font-weight: 700;
+}
+
+.dsa-learn-dsa h2 {
+    font-size: 1.75rem;
+    color: #dfedfa;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(52, 152, 219, 0.5); /* Subtle border */
+    padding-bottom: 5px;
+    font-weight: 600;
+}
+
+/* Paragraph styles */
+.dsa-learn-dsa p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #e0e0e0; /* Light gray for better readability */
+}
+
+/* List styles */
+.dsa-learn-dsa ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.dsa-learn-dsa ul li {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: #e0e0e0; /* Light gray for better readability */
+}
+
+/* Link styles */
+.dsa-youtube-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(45deg, #e74c3c, #c0392b); /* Gradient background */
+    border-radius: 8px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.dsa-youtube-link:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+/* Responsive design for very small screens (e.g., 320px) */
+@media (max-width: 480px) {
+    .dsa-learn-dsa {
+        padding: 15px; /* Slightly reduced padding */
+    }
+
+    .dsa-learn-dsa h1 {
+        font-size: 1.75rem; /* Smaller font size */
+    }
+
+    .dsa-learn-dsa h2 {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .dsa-learn-dsa p {
+        font-size: 0.95rem; /* Smaller font size */
+    }
+
+    .dsa-learn-dsa ul {
+        margin-left: 15px; /* Reduced margin */
+    }
+
+    .dsa-learn-dsa ul li {
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    .dsa-youtube-link {
+        font-size: 0.95rem; /* Smaller font size */
+        padding: 8px 16px; /* Smaller padding */
+    }
+}

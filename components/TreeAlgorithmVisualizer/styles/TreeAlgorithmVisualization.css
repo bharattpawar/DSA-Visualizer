@@ -1,0 +1,41 @@
+.tree-visualization-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+svg {
+  background-color: #1e1e1e; /* Dark background */
+  border: 1px solid #555555; /* Adjusted border color for dark background */
+  border-radius: 10px;
+}
+
+.line, .link {
+  fill: none;
+  stroke: #999999; /* Adjusted stroke color for better contrast on dark background */
+  stroke-width: 2px;
+}
+
+.node circle {
+  fill: steelblue;
+  stroke: #ffffff; /* White stroke */
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font: 12px sans-serif;
+  pointer-events: none;
+  fill: #ffffff; /* White text color */
+}
+
+circle {
+  stroke: #ffffff; /* White stroke */
+  stroke-width: 2;
+}
+
+text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  fill: #ffffff; /* White text color */
+}

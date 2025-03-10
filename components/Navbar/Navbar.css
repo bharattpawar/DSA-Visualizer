@@ -1,0 +1,337 @@
+/* Navbar Styles */
+.dsa-navbar {
+  background-color: rgba(26, 26, 26, 255); /* Updated background color */
+  color: white;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dsa-navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dsa-navbar-brand {
+  display: flex;
+  align-items: center; /* Align logo and text vertically */
+  gap: 10px; /* Space between logo and text */
+  font-size: 1.5rem; /* Use rem for scalability */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%; /* Makes the logo circular */
+  border: 2px solid rgba(255, 255, 255, 0.8); /* Adds a subtle border */
+  box-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.6), /* Inner glow */
+    0 0 20px rgba(255, 255, 255, 0.4), /* Middle glow */
+    0 0 30px rgba(255, 255, 255, 0.2); /* Outer glow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animation for rotation on hover */
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.logo:hover {
+  animation: rotate 3s linear infinite; /* Rotate for 3 seconds on hover */
+  transform: scale(1.1); /* Slightly enlarges the logo on hover */
+  box-shadow: 
+    0 0 15px rgba(255, 255, 255, 0.8), /* Stronger inner glow */
+    0 0 30px rgba(255, 255, 255, 0.6), /* Stronger middle glow */
+    0 0 45px rgba(255, 255, 255, 0.4); /* Stronger outer glow */
+}
+
+/* Animation for fast rotation on click */
+@keyframes fastRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.logo:active {
+  animation: fastRotate 1s linear; /* Rotate for 1 second */
+}
+
+.brand-text {
+  font-size: 1.5rem; /* Use rem for scalability */
+  font-weight: bold;
+  color: white;
+}
+
+.brand h1 {
+  font-size: 2rem; /* Use rem for scalability */
+  font-weight: bold;
+  color: white; /* Keep the text color white */
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.brand h1::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white; /* White underline */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.brand h1:hover {
+  transform: translateY(-3px); /* Move text slightly upward on hover */
+}
+
+.brand h1:hover::after {
+  transform: scaleX(1); /* Animate underline on hover */
+}
+
+.dsa-navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  z-index: 1000;
+}
+
+.dsa-hamburger {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.dsa-hamburger::before,
+.dsa-hamburger::after {
+  content: '';
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease, top 0.3s ease;
+}
+
+.dsa-hamburger::before {
+  top: -8px;
+}
+
+.dsa-hamburger::after {
+  top: 8px;
+}
+
+.dsa-navbar-toggle.dsa-active .dsa-hamburger {
+  transform: rotate(45deg);
+}
+
+.dsa-navbar-toggle.dsa-active .dsa-hamburger::before {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.dsa-navbar-toggle.dsa-active .dsa-hamburger::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+.dsa-navbar-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.dsa-nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.dsa-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.dsa-visualize-container {
+  position: relative;
+  cursor: pointer;
+}
+
+.dsa-visualize-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(35, 39, 47, 0.9);
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  min-width: 200px;
+  padding: 10px 0;
+  backdrop-filter: blur(10px);
+}
+
+.dsa-visualize-dropdown.dsa-active {
+  display: block;
+}
+
+.dsa-visualize-dropdown .dsa-nav-link {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+  position: relative;
+  right: 10px;
+  word-wrap: break-word;
+}
+
+.dsa-visualize-dropdown .dsa-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateX(5px);
+}
+
+#dsa-visualize {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: transparent;
+  background: linear-gradient(90deg, #ff6f61, #ff4a3d, #ff6f61); /* Gradient text */
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: transform 0.3s ease, background-position 0.5s ease;
+  display: inline-block;
+  margin: 5px 0;
+  margin-right: 50px;
+  position: relative;
+}
+
+#dsa-visualize::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff6f61, #ff4a3d, #ff6f61); /* Gradient underline */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+#dsa-visualize:hover {
+  transform: translateY(-3px);
+  background-position: 100% 0; /* Animate gradient on hover */
+}
+
+#dsa-visualize:hover::after {
+  transform: scaleX(1); /* Animate underline on hover */
+}
+
+@media (max-width: 768px) {
+  .dsa-navbar-toggle {
+    display: block;
+  }
+
+  .dsa-navbar-links {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    height: calc(100vh - 60px);
+    width: 250px;
+    background-color: rgb(35, 39, 47);
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
+    transition: right 0.3s ease;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+  }
+
+  .dsa-navbar-links.dsa-active {
+    right: 0;
+  }
+
+  .dsa-nav-link {
+    width: 100%;
+    text-align: left;
+    padding: 15px 20px;
+  }
+
+  .dsa-visualize-dropdown {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .dsa-visualize-dropdown .dsa-nav-link {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dsa-navbar-brand {
+    font-size: 1.2em;
+  }
+
+  .dsa-nav-link {
+    padding: 10px 15px;
+    font-size: 0.9em;
+  }
+
+  .dsa-hamburger,
+  .dsa-hamburger::before,
+  .dsa-hamburger::after {
+    width: 20px;
+    height: 2px;
+  }
+}
+@media (max-width: 768px) {
+  .brand-text {
+    font-size: 1.2rem; /* Smaller font size for tablets */
+  }
+
+  .brand h1 {
+    font-size: 1.5rem; /* Smaller font size for tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-text {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .brand h1 {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+}

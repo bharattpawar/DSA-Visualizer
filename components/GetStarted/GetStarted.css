@@ -1,0 +1,80 @@
+/* General styling for the Get Started page */
+.get-started {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1); /* Glass morphism background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Heading styling */
+.get-started h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient text */
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+/* Content styling */
+.get-started .content {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+/* Paragraph styling */
+.get-started p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #e0e0e0; /* Light gray for better readability */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Visualize Now button styling */
+.visualize-now-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6f61, #ff4a3d); /* Gradient background */
+  color: white;
+  padding: 15px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 1em;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+.visualize-now-button:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  background: linear-gradient(135deg, #ff4a3d, #ff6f61); /* Gradient change on hover */
+}
+
+/* Responsive design for small screens */
+@media (max-width: 768px) {
+  .get-started {
+      padding: 20px; /* Reduced padding for small screens */
+  }
+
+  .get-started h1 {
+      font-size: 2em; /* Smaller font size for small screens */
+  }
+
+  .get-started p {
+      font-size: 1em; /* Smaller font size for small screens */
+  }
+
+  .visualize-now-button {
+      padding: 12px 24px; /* Smaller padding for small screens */
+      font-size: 0.9em; /* Smaller font size for small screens */
+  }
+}

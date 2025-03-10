@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white; /* White text color */
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  background: rgba(40, 40, 40, 0.9); /* Dark background box */
+}
+
+/* Visualizer Container */
+.dp-visualizer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background: rgba(40, 40, 40, 0.9); /* Dark background box */
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  color: white; /* White text color */
+}
+
+.dp-visualizer-container h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: white; /* White text color */
+  margin-bottom: 20px;
+}
+
+.dp-view-toggle {
+  margin-bottom: 20px;
+}
+
+/* Visualization Container */
+.dp-visualization {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  color: white; /* White text color */
+}
+
+.dp-visualization h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: white; /* White text color */
+  margin-bottom: 20px;
+}
+
+/* Algorithm Containers */
+.dp-lis,
+.dp-lcs,
+.dp-knapsack,
+.dp-fibonacci {
+  width: 90%;
+  max-width: 800px;
+  background: rgba(40, 40, 40, 0.9); /* Dark background box */
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  color: white; /* White text color */
+}
+
+.dp-lis h3,
+.dp-lcs h3,
+.dp-knapsack h3,
+.dp-fibonacci h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: white; /* White text color */
+  margin-bottom: 10px;
+}
+
+/* Result and Message Containers */
+.dp-result {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: white; /* White text color */
+}
+
+.dp-lis-step,
+.dp-lcs-step,
+.dp-knapsack-step {
+  display: flex;
+  gap: 5px;
+}
+
+.dp-lis-number,
+.dp-lcs-number,
+.dp-knapsack-number,
+.dp-fib-number {
+  padding: 8px;
+  background: linear-gradient(135deg, #6e8efb, #4a6cf7);
+  color: white; /* White text color */
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 40px;
+}
+
+.dp-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dp-message {
+  font-size: 14px;
+  color: white; /* White text color */
+  margin: 0;
+}
+
+/* Input and Button Styles */
+.dp-fibonacci input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-right: 10px;
+  background: rgba(40, 40, 40, 0.9); /* Dark background box */
+  color: white; /* White text color */
+}
+
+.dp-fibonacci input:focus {
+  outline: none;
+  border-color: #6e8efb;
+  box-shadow: 0 0 8px rgba(110, 142, 251, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dp-lis,
+  .dp-lcs,
+  .dp-knapsack,
+  .dp-fibonacci {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .dp-lis-number,
+  .dp-lcs-number,
+  .dp-knapsack-number,
+  .dp-fib-number {
+    min-width: 30px;
+    font-size: 12px;
+  }
+
+  .dp-fibonacci input {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
