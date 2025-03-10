@@ -12,7 +12,10 @@ const VisualizerMode = () => {
   const [foundIndex, setFoundIndex] = useState(-1);
   const [explanations, setExplanations] = useState([]);
   const [manualArrayInput, setManualArrayInput] = useState('');
-  const [stepIndex, setStepIndex] = useState(0);
+  const [complexity, setComplexity] = useState({
+    time: '',
+    space: '',
+  });
   const intervalRef = useRef(null);
 
   // Generate a random array (unsorted)
@@ -22,7 +25,6 @@ const VisualizerMode = () => {
     setFoundIndex(-1);
     setCurrentIndex(-1);
     setExplanations([]);
-    setStepIndex(0);
   };
 
   // Handle manual array input (unsorted)
@@ -35,7 +37,6 @@ const VisualizerMode = () => {
     setFoundIndex(-1);
     setCurrentIndex(-1);
     setExplanations([]);
-    setStepIndex(0);
   };
 
   // Handle search start
@@ -45,7 +46,6 @@ const VisualizerMode = () => {
     setFoundIndex(-1);
     setCurrentIndex(-1);
     setExplanations([]);
-    setStepIndex(0);
 
     const searchFunction = algorithm === 'linear' ? linearSearch : binarySearch;
     const { steps, explanations: searchExplanations, found, error } = searchFunction(array, parseInt(target));
@@ -56,11 +56,12 @@ const VisualizerMode = () => {
       return;
     }
 
-    const runStep = (index) => {
-      if (index < steps.length) {
-        setCurrentIndex(steps[index]);
-        setExplanations((prev) => [...prev, searchExplanations[index]]);
-        setStepIndex(index + 1);
+    let stepIndex = 0;
+    intervalRef.current = setInterval(() => {
+      if (stepIndex < steps.length) {
+        setCurrentIndex(steps[stepIndex]);
+        setExplanations((prev) => [...prev, searchExplanations[stepIndex]]);
+        stepIndex++;
       } else {
         clearInterval(intervalRef.current);
         setSearching(false);
@@ -70,22 +71,8 @@ const VisualizerMode = () => {
           setExplanations((prev) => [...prev, `${target} not found in the array.`]);
         }
       }
-    };
-
-    intervalRef.current = setInterval(() => runStep(stepIndex), speed);
+    }, speed);
   };
-
-  // Handle speed change
-  useEffect(() => {
-    if (searching) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = setInterval(() => {
-        const index = stepIndex;
-        setStepIndex((prev) => prev + 1);
-        runStep(index);
-      }, speed);
-    }
-  }, [speed, searching, stepIndex]);
 
   // Handle search stop
   const stopSearch = () => {
@@ -98,8 +85,22 @@ const VisualizerMode = () => {
     setFoundIndex(-1);
     setCurrentIndex(-1);
     setExplanations([]);
-    setStepIndex(0);
   };
+
+  // Update complexity information when algorithm changes
+  useEffect(() => {
+    if (algorithm === 'linear') {
+      setComplexity({
+        time: 'O(n)',
+        space: 'O(1)',
+      });
+    } else if (algorithm === 'binary') {
+      setComplexity({
+        time: 'O(log n)',
+        space: 'O(1)',
+      });
+    }
+  }, [algorithm]);
 
   return (
     <div className="dsa-visualizer-mode">
@@ -130,7 +131,7 @@ const VisualizerMode = () => {
           min="100"
           max="1000"
           value={speed}
-          onChange={(e) => setSpeed(Number(e.target.value))}
+          onChange={(e) => setSpeed(e.target.value)}
         />
         <span>Speed: {speed}ms</span>
         <button onClick={startSearch} disabled={searching}>
@@ -156,6 +157,11 @@ const VisualizerMode = () => {
         {explanations.map((explanation, index) => (
           <p key={index}>{explanation}</p>
         ))}
+      </div>
+      <div className="dsa-complexity">
+        <h3>Algorithm Complexity:</h3>
+        <p>Time Complexity: {complexity.time}</p>
+        <p>Space Complexity: {complexity.space}</p>
       </div>
     </div>
   );
