@@ -11,6 +11,7 @@ import './styles2.css';
 const SortingRaceMode = () => {
   const [array, setArray] = useState([]);
   const [sorting, setSorting] = useState(false);
+  const [speed, setSpeed] = useState(500); // Speed state for the slider
   const [algorithms, setAlgorithms] = useState([
     { name: 'Bubble Sort', progress: 0, steps: [], states: [], explanations: [], completed: false, currentArray: [] },
     { name: 'Selection Sort', progress: 0, steps: [], states: [], explanations: [], completed: false, currentArray: [] },
@@ -105,7 +106,7 @@ const SortingRaceMode = () => {
           }))
         );
       }
-    }, 100);
+    }, speed);
   };
 
   // Handle race stop
@@ -144,6 +145,14 @@ const SortingRaceMode = () => {
           />
           <button onClick={handleManualArrayInput}>Set Array</button>
         </div>
+        <input
+          type="range"
+          min="100"
+          max="1000"
+          value={speed}
+          onChange={(e) => setSpeed(Number(e.target.value))}
+        />
+        <span className="speed">Speed: {speed}ms</span>
         <button onClick={startRace} disabled={sorting}>
           Start Race
         </button>
