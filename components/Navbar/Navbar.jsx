@@ -47,12 +47,13 @@ const Navbar = () => {
               <Link className="dsa-nav-link" to="/" onClick={toggleMenu}>
                 Home
               </Link>
+                <Link className="dsa-nav-link" to="/searching" onClick={toggleMenu}>
+                Searching Algorithms
+              </Link>
               <Link className="dsa-nav-link" to="/sorting" onClick={toggleMenu}>
                 Sorting Algorithms
               </Link>
-              <Link className="dsa-nav-link" to="/searching" onClick={toggleMenu}>
-                Searching Algorithms
-              </Link>
+             
               <Link className="dsa-nav-link" to="/graph" onClick={toggleMenu}>
                 Graph Algorithms
               </Link>
@@ -96,12 +97,13 @@ const Navbar = () => {
                 <Link className="dsa-nav-link" to="/" onClick={toggleMenu}>
                   Home
                 </Link>
+                 <Link className="dsa-nav-link" to="/searching" onClick={toggleMenu}>
+                  Searching Algorithms
+                </Link>
                 <Link className="dsa-nav-link" to="/sorting" onClick={toggleMenu}>
                   Sorting Algorithms
                 </Link>
-                <Link className="dsa-nav-link" to="/searching" onClick={toggleMenu}>
-                  Searching Algorithms
-                </Link>
+                
                 <Link className="dsa-nav-link" to="/graph" onClick={toggleMenu}>
                   Graph Algorithms
                 </Link>
