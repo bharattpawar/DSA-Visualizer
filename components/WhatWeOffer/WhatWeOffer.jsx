@@ -17,7 +17,18 @@ const WhatWeOffer = () => {
         visualizations. Below is a list of algorithm categories we offer, along
         with a brief explanation and a link to visualize them.
       </p>
-
+    {/* Searching Algorithms */}
+      <div className="algorithm-category">
+        <h2>Searching Algorithms</h2>
+        <p>
+          Searching algorithms are used to find a specific element in a data
+          structure. Common searching algorithms include Linear Search and Binary
+          Search.
+        </p>
+        <Link to="/searching" className="visualize-button">
+          Visualize Searching Algorithms
+        </Link>
+      </div>
       {/* Sorting Algorithms */}
       <div className="algorithm-category">
         <h2>Sorting Algorithms</h2>
@@ -32,18 +43,7 @@ const WhatWeOffer = () => {
         </Link>
       </div>
 
-      {/* Searching Algorithms */}
-      <div className="algorithm-category">
-        <h2>Searching Algorithms</h2>
-        <p>
-          Searching algorithms are used to find a specific element in a data
-          structure. Common searching algorithms include Linear Search and Binary
-          Search.
-        </p>
-        <Link to="/searching" className="visualize-button">
-          Visualize Searching Algorithms
-        </Link>
-      </div>
+   
 
       {/* Graph Algorithms */}
       <div className="algorithm-category">
