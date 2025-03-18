@@ -20,7 +20,7 @@ const GetStarted = () => {
           Whether you're a student, a professional, or someone preparing for coding interviews, DSA visualization can significantly improve your learning experience. It makes abstract concepts tangible and helps you build a strong foundation in computer science.
         </p>
       </div>
-      <Link to="/sorting" className="visualize-now-button">
+      <Link to="/searching" className="visualize-now-button">
         Visualize Now
       </Link>
     </div>
