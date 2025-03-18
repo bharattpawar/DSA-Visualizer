@@ -32,6 +32,11 @@ const Home = () => {
       <div className="dsa-hero-content">
         <h1>Data Structures and Algorithms Visualizer</h1>
         <p>Explore various algorithms and data structures with interactive visualizations.</p>
+          {location.pathname === "/" && (
+          <Link to="/what-we-offer" className="dsa-footer-button">
+            What We Offer
+          </Link>
+        )}
         <div className="dsa-hero-buttons">
           <Link to="/get-started" className="dsa-hero-button">Get Started</Link>
           <Link to="/learn-dsa" className="dsa-hero-button">Learn DSA</Link>
@@ -54,11 +59,7 @@ const Footer = () => {
         {/* Conditionally render the "Homepages" component */}
         {location.pathname === "/" && <Homepages />}
         {/* Conditionally render the "What We Offer" button only on the home page */}
-        {location.pathname === "/" && (
-          <Link to="/what-we-offer" className="dsa-footer-button">
-            What We Offer
-          </Link>
-        )}
+       
         <p>&copy; 2025 DSA Visualizer. All rights reserved by Bharat Pawar</p>
       </div>
     </footer>
