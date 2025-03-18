@@ -168,7 +168,7 @@ const RaceMode = () => {
                   } ${
                     algo.found && algo.steps[algo.steps.length - 1] === idx ? 'dsa-array-bar-found' : ''
                   }`}
-                  style={{ height: `${value}px` }}
+                  style={{ height: `${value+30}px` }}
                   data-value={value}
                 ></div>
               ))}
